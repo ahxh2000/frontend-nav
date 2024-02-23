@@ -3,6 +3,7 @@ import getNavLinks from "./links"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { LinkContent } from "@/components/link-content"
+import BackgroundMusic from "@/components/Bgmusic"
 
 export const revalidate = 24 * 60 * 60;
 
@@ -21,10 +22,11 @@ export default async function IndexPage() {
          <Sidebar navItems={navItems} />
         </div>
         <div className="sm:pl-[16rem]">
-          {/* @ts-expect-error Async Server Component */}
+
           <SiteHeader navItems={navItems} />
           <LinkContent navResources={navResources} />
           <SiteFooter />
+          <BackgroundMusic/> 
         </div>
       </div>
     </div>
